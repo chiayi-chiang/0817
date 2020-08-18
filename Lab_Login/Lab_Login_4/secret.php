@@ -1,9 +1,10 @@
 <?php 
 
-if (!isset($_COOKIE["userName"]))
+if (!isset($_COOKIE["userName"]))//檢查$_COOKIE是否沒有一個userName的陣列資料
 {
-	setcookie("lastPage", "secret.php");
-	header("Location: login.php");
+  //沒有
+	setcookie("lastPage", "secret.php");//請瀏覽器(userName)幫忙記住$sUserName的資料
+	header("Location: login.php");//回首頁
 	exit();
 	
 }

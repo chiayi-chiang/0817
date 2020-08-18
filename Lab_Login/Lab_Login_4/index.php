@@ -1,3 +1,4 @@
+<!--首頁，製作超連結至login.php-->
 <?php 
 
 if (isset($_COOKIE["userName"]))
@@ -30,7 +31,7 @@ else
     | <a href="secret.php">會員專用頁</a></td>
   </tr>
   <tr>
-    <td align="center" bgcolor="#CCCCCC"><?php echo "Welcome! " . $sUserName ?> </td>
+    <td align="center" bgcolor="#CCCCCC"><?php echo "Welcome! " . $sUserName /*登入成功後會出現使用者帳號*/?> </td>
   </tr>
 </table>
 

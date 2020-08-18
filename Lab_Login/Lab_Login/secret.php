@@ -1,3 +1,17 @@
+<?php 
+session_start();
+if (!isset($_SESSION["userName"]))//檢查$_COOKIE是否沒有一個userName的陣列資料
+{
+  //沒有
+  
+	setcookie("lastPage", "secret.php");//請瀏覽器(userName)幫忙記住$sUserName的資料
+	header("Location: login.php");//回首頁
+	exit();
+	
+}
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
